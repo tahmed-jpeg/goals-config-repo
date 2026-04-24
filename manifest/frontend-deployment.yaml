@@ -17,8 +17,21 @@ spec:
       containers:
       - name: frontend
         image: tahmed2026/goals-frontend:latest
+        imagePullPolicy: Always
         ports:
         - containerPort: 3000
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 15
+          periodSeconds: 5
         resources:
           limits:
             memory: "128Mi"
