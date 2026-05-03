@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: tahmed2026/goals-frontend:latest
+        image: tahmed2026/goals-frontend:4
         imagePullPolicy: Always
         ports:
         - containerPort: 3000

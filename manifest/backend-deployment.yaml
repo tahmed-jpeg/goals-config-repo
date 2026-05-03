@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: tahmed2026/goals-backend:latest
+        image: tahmed2026/goals-backend:4
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
